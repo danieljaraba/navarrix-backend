@@ -17,14 +17,14 @@ public class UserModel {
     private String id;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "roleid")
     private RoleModel role;
     private String name;
-    private String user;
+    private String usertxt;
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "sector_id")
+    @JoinColumn(name = "sectorid")
     @Nullable
     private SectorModel sectorId;
 
@@ -36,7 +36,7 @@ public class UserModel {
         this.id = id;
         this.role = role;
         this.name = name;
-        this.user = user;
+        this.usertxt = user;
         this.password = password;
         this.sectorId = sectorId;
     }
@@ -62,10 +62,10 @@ public class UserModel {
         this.name = name;
     }
     public String getUser() {
-        return user;
+        return usertxt;
     }
     public void setUser(String username) {
-        this.user = username;
+        this.usertxt = username;
     }
     public String getPassword() {
         return password;
@@ -86,7 +86,7 @@ public class UserModel {
                 "id='" + id + '\'' +
                 ", role=" + role.getId() +
                 ", name='" + name + '\'' +
-                ", user='" + user + '\'' +
+                ", user='" + usertxt + '\'' +
                 ", password='" + password + '\'' +
                 ", sectorId=" + sectorId +
                 '}';
