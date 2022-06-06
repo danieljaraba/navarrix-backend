@@ -21,9 +21,9 @@ public class SensorModel {
 
 
     @ManyToOne
-    @JoinColumn(name = "sector_id")
+    @JoinColumn(name = "sectorid")
     @Nullable
-    private SectorModel sector_id;
+    private SectorModel sectorId;
 
 
     public SensorModel() {
@@ -34,7 +34,7 @@ public class SensorModel {
         this.id = id;
         this.type = type;
         this.scale = scale;
-        this.sector_id = sector_id;
+        this.sectorId = sector_id;
     }
 
 
@@ -69,12 +69,12 @@ public class SensorModel {
 
 
     public SectorModel getSector_id() {
-        return sector_id;
+        return sectorId;
     }
 
 
     public void setSector_id(SectorModel sector_id) {
-        this.sector_id = sector_id;
+        this.sectorId = sector_id;
     }
 
 
